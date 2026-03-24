@@ -62,14 +62,14 @@
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1.2rem 2rem;
+    padding: 0rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo img {
-    height: 100px;
+    height: 120px;
     transition: transform 0.3s ease;
 }
 
@@ -90,7 +90,7 @@
 .nav-links a {
     color: var(--dark);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -1633,19 +1633,47 @@
             }
 
             /* MOBILE: Hero Section */
-            .hero {
-                min-height: auto;
-                padding: 3rem 1rem;
-            }
+            /* MOBILE: Hero Section */
+.hero {
+    min-height: auto;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
 
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+.hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+}
 
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
+.hero-text h1 {
+    font-size: 2.2rem;
+}
+
+/* MOBILE: Fix hero image circle fixed size */
+.hero-image {
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-image-circle {
+    width: min(320px, 85vw);
+    height: min(320px, 85vw);
+    flex-shrink: 1;
+}
+
+.hero-image-circle img {
+    width: 115%;
+    max-width: none;
+    transform: translateY(-20px) translateX(-8%);
+    animation: floatImageMobile 3s ease-in-out infinite;
+}
+
+@keyframes floatImageMobile {
+    0%, 100% { transform: translateY(-20px) translateX(-8%); }
+    50% { transform: translateY(-35px) translateX(-8%); }
+}
 
             .hero-text p {
                 font-size: 1rem;
@@ -1894,7 +1922,7 @@
             </div>
             <div class="hero-image">
                 <div class="hero-image-circle">
-                <img src="./assets/images/index/HD1.png" alt="Elevator">
+                <img src="./assets/images/index/hdnew.png" alt="Elevator">
             </div>
 </div>
         </div>
@@ -2089,7 +2117,7 @@
                     <h3>Contact Us</h3>
                     <div class="footer-contact">
                         <a href="tel:+919829408299"><i class="fa fa-phone"></i> +91 98294 08299</a>
-                        <a href="mailto:siddhamtechno@zohomail.com"><i class="fa fa-envelope"></i> siddhamtechno@zohomail.com</a>
+                        <a href="mailto:siddhamtechno@zohomail.in"><i class="fa fa-envelope"></i> siddhamtechno@zohomail.in</a>
                         <a href="#"><i class="fa fa-map-marker-alt"></i> 79-80 Pancholi Vihar Vistar, Narayan Vihar Jaipur 302020</a>
                     </div>
                 </div>
@@ -2296,6 +2324,7 @@ function toggleAboutCard(card) {
     const fileName = pathParts[pathParts.length - 1];
     const productName = fileName
         .replace(/\.(jpg|jpeg|png|gif|webp)$/i, '')
+        .replace(/(\d)-(\d)/g, '$1 - $2')
         .replace(/[-_]/g, ' ')
         .trim();
     

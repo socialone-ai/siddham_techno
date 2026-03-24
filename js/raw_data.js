@@ -79,7 +79,7 @@ const data = [
 					"./assets/images/categories/Wiring Parts/Inspection-Box.jpg",
 					"./assets/images/categories/Wiring Parts/J-Pata.jpg",
 					"./assets/images/categories/Wiring Parts/Junction-Box.jpg",
-					"./assets/images/categories/Wiring Parts/Limit-Switch.jpg",
+					"./assets/images/categories/Wiring Parts/Limit-Switch-RH.jpg",
 					"./assets/images/categories/Wiring Parts/Limit-Switch-CNTD.jpg",
 					"./assets/images/categories/Wiring Parts/Limit-Switch-LH.jpg",
 					"./assets/images/categories/Wiring Parts/Limit-Switch-NO.jpg",
@@ -449,11 +449,12 @@ buy_now = (productPath = null, productName = null) => {
 
 // Helper function to extract product name from file path
 function extractProductNameFromPath(filePath) {
-	let name = filePath.split('/').pop(); // Get filename
-	name = name.split('.')[0]; // Remove extension
-	name = name.replace(/_/g, ' '); // Replace underscores with spaces
-	name = name.replace(/-/g, ' '); // Replace hyphens with spaces
-	return name.charAt(0).toUpperCase() + name.slice(1); // Capitalize first letter
+    let name = filePath.split('/').pop();
+    name = name.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '');
+    name = name.replace(/(\d)-(\d)/g, '$1 - $2');
+    name = name.replace(/_/g, ' ');
+    name = name.replace(/-/g, ' ');
+    return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 
