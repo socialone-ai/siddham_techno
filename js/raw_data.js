@@ -299,7 +299,7 @@ const data = [
 			name:"DIVERTER PULLEYES",
 			products: [
 				"./assets/images/categories/DIVERTER PULLEYES/DIVERTER-PULLEY.jpg",
-				"./assets/images/categories/DIVERTER PULLEYES/DIVERTER-PULLEY.jpg",
+				"./assets/images/categories/DIVERTER PULLEYES/NYLON-PULLEY.jpg",
 			]
 		},
 		{
@@ -415,7 +415,7 @@ const data = [
 						"./assets/images/categories/Hardware Parts/DBG Accessories/Safety-Block-Shoe.jpg",
 						"./assets/images/categories/Hardware Parts/DBG Accessories/Safety-Clutch.jpg",
 						"./assets/images/categories/Hardware Parts/DBG Accessories/Spring-Buffer.jpg",
-						"./assets/images/categories/Hardware Parts/DBG Accessories/Thimble-Eye-Bolt.jpg",
+						"./assets/images/categories/Hardware Parts/DBG Accessories/Thimble-I-Bolt.jpg",
 					]
 					}
 				]
