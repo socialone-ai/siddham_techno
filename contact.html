@@ -2087,14 +2087,14 @@ function toggleAboutCard(card) {
 
     // Buy now function (WhatsApp)
     function buy_now(productId) {
-        const phoneNumber = "+919351118772";
+        const phoneNumber = "+919257018688";
         let message = "Hello! I'm interested in your elevator products.";
         
         if (productId >= 0 && typeof data !== 'undefined' && data[productId]) {
             message = `Hello! I'm interested in ${data[productId].name}`;
         }
         
-        const whatsappUrl = `https://wa.me/919351118772?text=Hello!%20I'm%20interested%20in%20your%20elevator%20products.`;
+        const whatsappUrl = `https://wa.me/919257018688?text=Hello!%20I'm%20interested%20in%20your%20elevator%20products.`;
         window.open(whatsappUrl, '_blank');
     }
 
@@ -2153,7 +2153,7 @@ function toggleAboutCard(card) {
         .replace(/[-_]/g, ' ')
         .trim();
     
-    const phoneNumber = "919351118772";
+    const phoneNumber = "919257018688";
     const whatsappMessage = encodeURIComponent(`Hello! I'm interested in ${productName} from ${categoryName}`);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
     

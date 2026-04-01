@@ -453,7 +453,7 @@ function extractProductNameFromPath(filePath) {
     name = name.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '');
     name = name.replace(/(\d+)-(\d+)/g, '$1 - $2');
     name = name.replace(/_/g, ' ');
-    name = name.replace(/(?<! )-(?! )/g, ' '); 
+    name = name.replace(/(?<! )-(?! )/g, ' ');
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
